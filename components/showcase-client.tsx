@@ -27,7 +27,7 @@ const STATUS_META: Record<StatusKind, { label: string; color: string; bg: string
   conditional:  { label: "Conditional",  color: "#ffd05d", bg: "rgba(255,208,93,0.12)"  },
   experimental: { label: "Experimental", color: "#eb5815", bg: "rgba(235,88,21,0.12)"   },
   planned:      { label: "Planned",       color: "#93a7c3", bg: "rgba(147,167,195,0.10)" },
-  stub:         { label: "Stub / WIP",    color: "#ff995d", bg: "rgba(255,153,93,0.12)"  },
+  stub:         { label: "Not finished",    color: "#ff995d", bg: "rgba(255,153,93,0.12)"  },
 };
 
 const MODULES = [
@@ -813,7 +813,7 @@ function ModulesSection() {
             exists but is not wired into the primary product flow.
           </p>
           <p style={{ margin: 0 }}>
-            <strong style={{ color: STATUS_META.stub.color }}>Stub / WIP</strong> — route or file
+            <strong style={{ color: STATUS_META.stub.color }}>Not finished</strong> — route or file
             exists as a placeholder; logic not yet implemented.
           </p>
           <p style={{ margin: 0 }}>
