@@ -9,7 +9,7 @@ const PRODUCT = {
   nameAr: "عاجل",
   tagline: "AI-Powered Geopolitical Intelligence Dashboard",
   audience: "Executives · Analysts · Policymakers",
-  focus: "Middle East Crisis Monitoring",
+  focus: "Middle East Crisis Updates",
   version: "0.2.0",
   status: "Production-Ready Core",
   stack: "Next.js 15 · React 19 · TypeScript · SQLite · OpenAI",
@@ -40,7 +40,7 @@ const MODULES = [
     summary:
       "Fetches headlines from three complementary sources. GDELT covers news events globally; ReliefWeb surfaces UN humanitarian data; NewsAPI adds optional commercial depth. All three are merged, deduplicated by URL, and enriched with metadata.",
     business:
-      "Gives analysts a consolidated, multi-source feed without manually monitoring each outlet — reducing cognitive load and response latency.",
+      "Read updates from several news sources in one place.",
     details: [
       "GDELT revalidates every 180 s",
       "ReliefWeb revalidates every 300 s",
@@ -145,7 +145,7 @@ const MODULES = [
       "Credentials: AJEL_USER / AJEL_PASS env vars",
       "Cookie: ajel_session (HMAC-SHA256, 24-hour TTL)",
       "Middleware protects /dashboard route only",
-      "Single user — no RBAC yet",
+      "Single user; team permissions are not available yet",
     ],
   },
   {
@@ -310,7 +310,7 @@ const ARCH_LAYERS = [
     label: "Business Logic",
     color: "#ffd05d",
     items: [
-      "lib/live.ts — brief orchestrator",
+      "lib/live.ts — prepares the briefing",
       "lib/sources.ts — GDELT, ReliefWeb, NewsAPI fetchers",
       "lib/insights.ts — AI + heuristic synthesis",
       "lib/scoring.ts → embedded in sources/live",
@@ -467,7 +467,7 @@ function OverviewSection() {
       <div className="panel">
         <p className="panel-topline">What This Repo Actually Does</p>
         <p style={{ margin: "0 0 18px", lineHeight: 1.7, color: "#d7e6ff", fontSize: "1.05rem" }}>
-          AJEL V2 is a <strong>production-oriented Middle East crisis monitoring system</strong>.
+          AJEL V2 is a <strong>Middle East crisis news service</strong>.
           It aggregates live headlines from GDELT, ReliefWeb, and optionally NewsAPI; scores every item
           for severity using a heuristic engine; optionally synthesises an executive brief via OpenAI;
           and presents everything in a secured, data-rich dashboard built for analysts who need
@@ -995,7 +995,7 @@ function ArchitectureSection() {
               title: "API Routes (Node.js)",
               color: "#ffd05d",
               points: [
-                "All run in Node.js runtime (not Edge)",
+                "Runs on Node.js",
                 "Direct SQLite access via storage.ts",
                 "External fetches via sources.ts",
               ],
@@ -1191,7 +1191,7 @@ function RoadmapSection() {
               icon: "⚡",
               title: "Speed Advantage",
               body:
-                "Aggregates and scores hundreds of headlines in seconds — dramatically faster than manual monitoring of multiple news outlets.",
+                "Collects and ranks headlines from several news sources.",
             },
             {
               icon: "🎯",
@@ -1274,7 +1274,7 @@ function RoadmapSection() {
             {
               label: "White-Label / Enterprise",
               color: "#ffd05d",
-              desc: "License the platform to government agencies or security firms monitoring specific regions.",
+              desc: "License regional news coverage to government agencies or security firms.",
             },
             {
               label: "Report Generation",
@@ -1613,3 +1613,5 @@ export function ShowcaseClient() {
     </div>
   );
 }
+
+

@@ -388,7 +388,7 @@ Use 𝐔𝐧𝐢𝐜𝐨𝐝𝐞 𝐛𝐨𝐥𝐝 for emphasis. Use emojis. Be a
                 onChange={(e) => setPrompt(e.target.value)}
                 placeholder={
                   mediaType === "infographic"
-                    ? "e.g. AI Governance Framework, 5-Step Tax Compliance, Future of Work..."
+                    ? "e.g. AI rules, tax compliance in five steps, future of work..."
                     : "Describe what you want to create..."
                 }
                 rows={3}
@@ -506,3 +506,4 @@ Use 𝐔𝐧𝐢𝐜𝐨𝐝𝐞 𝐛𝐨𝐥𝐝 for emphasis. Use emojis. Be a
     </div>
   );
 }
+
